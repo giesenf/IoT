@@ -287,10 +287,7 @@ void get_forecast_by_coords() {
 
         // Extract relevant weather data from JSON
         forecast_data.time_str = forecast_time_str;
-        forecast_data.temperature = elem["main"]["temp"];
         forecast_data.description = elem["weather"][0]["description"].as<String>();
-        forecast_data.humidity = elem["main"]["humidity"];
-        forecast_data.wind_speed = elem["wind"]["speed"];
         Serial.println(forecast_data.description);
 
         // Add the forecast data to the list
